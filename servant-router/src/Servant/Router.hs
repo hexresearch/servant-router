@@ -31,8 +31,8 @@ import           Web.HttpApiData
 data View
 
 instance HasLink View where
-  type MkLink View = MkLink (Get '[] ())
-  toLink _ = toLink (Proxy :: Proxy (Get '[] ()))
+  type MkLink View a = MkLink (Get '[] ()) a
+  toLink toA _ = toLink toA (Proxy :: Proxy (Get '[] ()))
 
 -- | When routing, the router may fail to match a location.
 -- Either this is an unrecoverable failure,
