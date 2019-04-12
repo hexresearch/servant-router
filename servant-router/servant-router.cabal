@@ -17,7 +17,7 @@ library
   hs-source-dirs:      src
   exposed-modules:     Servant.Router
   build-depends:       base           >= 4.8 && < 5
-                     , servant        >= 0.7 && < 0.14
+                     , servant        >= 0.7 && < 0.15
                      , text           == 1.2.*
                      , http-api-data  >= 0.2 && < 0.4
                      , http-types     == 0.9.*
